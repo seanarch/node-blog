@@ -301,8 +301,8 @@ img {
 
 /* SeachBar */
 .searchBar {
-  /* visibility: hidden;
-  transform: translateY(-100px); */
+  visibility: hidden;
+  transform: translateY(-100px);
   background-color: var(--black);
   padding: 4px 0;
   position: absolute;
@@ -310,7 +310,7 @@ img {
   right: 0;
 }
 
-/* .searchBar.open {
+.searchBar.open {
   transform: translateY(0);
   transition: transform 0.1s;
 }
@@ -326,7 +326,7 @@ img {
   right: 0;
   color: var(--gray-light);
   padding: 15px;
-} */
+}
 
 .pagination {
   font-size: 1.3rem;
