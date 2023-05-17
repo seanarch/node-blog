@@ -22,7 +22,7 @@ app.use(
   session({
     secret: "keyboard cat",
     resave: false,
-    saveUnitialized: true,
+    saveUninitialized: true,
     store: MongoStore.create({
       mongoUrl: process.env.MONGODB_URI,
     }),
