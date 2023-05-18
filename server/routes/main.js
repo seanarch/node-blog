@@ -120,7 +120,9 @@ router.post("/search", async (req, res) => {
       data,
       locals,
     });
-  } catch (error) {}
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 router.get("/about", (req, res) => {

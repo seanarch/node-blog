@@ -98,10 +98,11 @@ router.get("/dashboard", authMiddleware, async (req, res) => {
     res.render("admin/dashboard", {
       locals,
       data,
+      layout: adminLayout,
     });
-  } catch (err) {}
-
-  res.render("admin/dashboard");
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 // router.post("/admin", async (req, res) => {
