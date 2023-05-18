@@ -88,6 +88,19 @@ router.post("/admin", async (req, res) => {
 // Routes
 // POST / admin - register
 router.get("/dashboard", authMiddleware, async (req, res) => {
+  try {
+    const locals = {
+      title: "Dashboard",
+      description: "Simple Blog created with NodeJs, Express and MongoDb",
+    };
+
+    const data = await Post.find();
+    res.render("admin/dashboard", {
+      locals,
+      data,
+    });
+  } catch (err) {}
+
   res.render("admin/dashboard");
 });
 
