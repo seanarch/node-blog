@@ -120,4 +120,23 @@ router.get("/dashboard", authMiddleware, async (req, res) => {
 //   }
 // });
 
+// Routes
+// POST / admin - create new post
+router.get("/add-post", authMiddleware, async (req, res) => {
+  try {
+    const locals = {
+      title: "Add Post",
+      description: "Simple Blog created with NodeJs, Express & MongoDb.",
+    };
+
+    const data = await Post.find();
+    res.render("admin/add-post", {
+      locals,
+      layout: adminLayout,
+    });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
 module.exports = router;
